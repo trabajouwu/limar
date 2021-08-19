@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+}
+
+html {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --main-green: #008037;
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/*Top*/
+
+.top {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+}
+
+.logo {
+  position: fixed;
+  height: 10vh;
+  margin-left: 2vw;
+}
+
+.search-div {
+  width: 4.5vh;
+  position: fixed;
+  border: 2px solid rgba(245, 245, 245, 0.8);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  height: 4.5vh;
+  right: 10vw;
+  top: 2vh;
+  transition: 1s;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.search-div img {
+  filter: invert(80%);
+  width: 4.5vh;
+  cursor: pointer;
+}
+
+input {
+  width: 80%;
+  height: 100%;
+  background-color: black;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+nav {
+  position: fixed;
+  background-color: var(--main-green);
+  display: flex;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  filter: invert(100%);
+  width: 6vh;
+  height: 6vh;
+  margin: 0 10vw;
+  cursor: pointer;
+}
+
+section {
+  padding-top: 20vh;
+}
+
+.filter {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  order: 1;
+}
+
+/*Home*/
+
+.home-slogan {
+  background-color: var(--main-green);
+  width: 70vw;
+  border-radius: 5vw;
+  padding: 2rem 1rem;
+  display: block;
+  margin: auto;
+}
+
+.home-slogan p {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+
+.search-is-active {
+  width: 80vw;
+  border-radius: 2rem;
+  border: whitesmoke solid 2px;
+}
+
+.line {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.line p {
+  font-size: 1.5rem;
+  color: var(--main-green);
+  font-weight: 900;
+  text-align: center;
+}
+
+/*Products*/
+
+.flex {
+  padding-top: 2rem;
+  display: block;
+  width: 80vw;
+  margin: auto;
+  padding-bottom: 17vh;
+}
+
+#cremas-y-cuidado-personal,
+#jabones,
+#splashs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 35vw;
+  height: 35vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.product img {
+  width: 80%;
+  height: 80%;
+  padding-top: 10%;
+  padding-left: 10%;
+}
+
+.show-product {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+.show-product .return {
+  padding: 1rem 0.5rem;
+  width: 20vw;
+  position: fixed;
+}
+
+.show-product .content,
+.show-product .price,
+.show-product .title {
+  color: rgb(194, 194, 194);
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  margin: 0 10vw;
+}
+
+.show-product .title {
+  color: var(--main-green);
+  padding-top: 10vh;
+  font-size: 1.6rem;
+  margin: 0 10vw;
+}
+.show-product .price {
+  color: whitesmoke;
+  font-size: 2rem;
+}
+.show-product .show-product-img {
+  height: 45vh;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding-top: 10vh;
+}
+
+.opacity-50 {
+  opacity: 50%;
+}
+
+/*info*/
+
+#info {
+  padding-top: 10vh;
+}
+
+#info h2 {
+  text-align: center;
+  margin: 0 10vw;
+  color: var(--main-green);
+  font-size: 1.5rem;
+}
+
+.contact-info {
+  text-align: center;
+  margin: 5vh 10vw;
+  color: whitesmoke;
+  font-size: 1rem;
+}
+
+.mail {
+  display: flex;
+  margin: 5vh 10%;
+  justify-content: center;
+}
+
+.mail a {
+  text-decoration: none;
+  color: var(--main-green);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.note {
+  text-align: center;
+  margin: 5vh 10vw;
+  color: rgb(218, 218, 218);
+  font-size: 1.2rem;
+  padding-bottom: 10vh;
+}
+
+@media (min-width: 600px) {
+  .product {
+    width: 18vw;
+    height: 18vw;
+    margin: 3vw;
+  }
+  .show-product .return {
+    padding: 1rem 0.5rem;
+    width: 10vw;
+    position: fixed;
+  }
+  .home-slogan p {
+    font-size: 2.5rem;
+  }
+  .line p {
+    font-size: 3rem;
+    color: var(--main-green);
+    font-weight: 900;
+    text-align: center;
+  }
+
+  /*Info*/
+
+  #info h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-info {
+    font-size: 1.5rem;
+  }
+
+  .mail a {
+    font-size: 1.8rem;
+  }
+
+  .note {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 330px) {
+  .line p {
+    font-size: 1.3rem;
+  }
+}
