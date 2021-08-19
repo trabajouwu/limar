@@ -12,7 +12,7 @@ function searchFilter(input, selector) {
       if(e.key === "Escape") e.target.vale = "";
       
       d.querySelectorAll(selector).forEach((el, index) => {
-        if (productosAñadidos[index].etiquetas.toLowerCase().includes(e.target.value)){
+        if (productosAñadidos[index].etiquetas.toLowerCase().includes(e.target.value.toLowerCase())){
           el.classList.remove("none")
         }
         else{
